@@ -15,7 +15,7 @@
 
     </script> -->
 
-    <script>
+    <!-- <script>
         var num = prompt("Nhập chuỗi số");
         var str = num.toString();
         var result = [str[0]];
@@ -30,6 +30,22 @@
         }
         document.write(result.join(''));
 
+    </script> -->
+    <script>
+        let str = prompt("Nhập chuỗi ký tự");
+        let result = [];
+        var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        for (i = 0; i < str.length; i++) {
+            if (UPPER.indexOf(str[i]) != -1) {
+                result.push(str[i].toLowerCase());
+            } else if(LOWER.indexOf(str[i]) != -1){
+                result.push(str[i].toUpperCase());
+            }else{
+                result.push(str[i]);
+            }
+        }
+        console.log(result.join(''));
     </script>
 </body>
 
