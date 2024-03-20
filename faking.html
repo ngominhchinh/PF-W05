@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h2>Type anthing slowly</h2>
+        <form name="f">
+            <textarea name="txt" cols="40" rows="10" onkeydown="typeTextarea();"></textarea>
+        </form>
+    </center>
+    <script>
+        let arr = ["T", "ô", "i", " ", "l", "à", " ", "m", "ộ", "t", " ", "đ", "ứ", "a", " ", "n", "g", "ố", "c"];
+        n = "";
+        function typeTextarea() {
+            t = document.f.txt.value;            
+            if (t.length <= 19) {
+                for (let i = 0; i < t.length; i++) {
+                    n += arr[i];                    
+                }
+            } 
+            document.f.txt.value = n;    
+            n="";       
+            setTimeout("typeTextarea()", 1);
+        }
+
+    </script>
+</body>
+
+</html>
